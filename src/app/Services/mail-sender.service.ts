@@ -9,7 +9,7 @@ export class MailSenderService {
   constructor(private http:HttpClient) { }
 
   SendMail(mail:MailSender) {
-    return this.http.post<MailSender>("http://localhost:8081/api/mail", mail)
+    return this.http.post<MailSender>("https://portfolio-backend-vzrl.onrender.com/api/mail", mail)
 
   }
 }
