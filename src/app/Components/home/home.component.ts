@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.mailSenderService.SendMail(this.mailSender).subscribe(result =>this.toastr.success('Thank you for the feedback '+this.mailSender.name, 'Message Sent!'));
+    this.mailSenderService.SendMail(this.mailSender).subscribe(result => window.location.reload());
+    this.toastr.success('Thank you for the feedback '+this.mailSender.name, 'Message Sent!');
   }
 
 

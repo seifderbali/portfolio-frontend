@@ -1,0 +1,23 @@
+// Put this in your SCSS file (e.g. styles.scss or custom-toast.scss)
+
+body .toast {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+body .toast-success {
+  background-color: #0a53be !important;
+}
+
+body .toast-error {
+  background-color: #dc3545 !important;
+}
+
+body .toast-info {
+  background-color: #17a2b8 !important;
+}
+
+body .toast-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}

@@ -3,7 +3,7 @@
   <!-- Hero Section -->
   <section id="hero" class="hero section light-background">
 
-    <img src="../../../assets/img/bkg.jpg">
+    <img src="../../../assets/img/seifBKG.jpg">
 
     <div class="container">
       <div class="row justify-content-center">
@@ -274,7 +274,7 @@
               <span>English Resume</span>
             </a>
 
-            <a href="../../../assets/CV-Seif-Derblai.pdf" class="btn btn-outline-primary px-4 py-2 shadow-sm rounded-pill d-flex align-items-center gap-2" download>
+            <a href="../../../assets/CV-Seif-Derbali.pdf" class="btn btn-outline-primary px-4 py-2 shadow-sm rounded-pill d-flex align-items-center gap-2" download>
               <i class="bi bi-download"></i>
               <span>French Resume</span>
             </a>
@@ -579,9 +579,23 @@
                 <input type="text" class="form-control" id="name" name="name"  placeholder="Name" [(ngModel)]="mailSender.name" required>
               </div>
 
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" [(ngModel)]="mailSender.mail" required="">
-              </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Your Email"
+                    [(ngModel)]="mailSender.mail"
+                    required
+                    email
+                    #email="ngModel"
+                  />
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger mt-1">
+                    <small *ngIf="email.errors?.['required']">Email is required.</small>
+                    <small *ngIf="email.errors?.['email']">Please enter a valid email address.</small>
+                  </div>
+                </div>
+
 
               <div class="col-md-12">
                 <input type="text" class="form-control" name="subject" placeholder="Subject" [(ngModel)]="mailSender.subject" required="">

@@ -1,2 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-toastr/toastr';
+// Override default toastr styles with higher specificity
+body .toast {
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+body .toast-success {
+  background-color: #0a58ca !important;
+}
+
+body .toast-error {
+  background-color: #dc3545 !important;
+}
+
+body .toast-info {
+  background-color: #17a2b8 !important;
+}
+
+body .toast-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
